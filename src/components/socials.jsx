@@ -14,11 +14,11 @@ const Socials = (props) => {
     };
 
     return (
-        <ul className="flex gap-2">
-            <li><a className="icon-footer hover:bg-surface-300" target="_blank" href="https://api.whatsapp.com/send/?phone=6283847070417"><FaWhatsapp fontSize={"1.5rem"} /></a></li>
-            <li><a className="icon-footer hover:bg-surface-300" target="_blank" href={`https://www.instagram.com/${props.data.instagram}`}><FaInstagram fontSize={"1.5rem"} /></a></li>
-            <li><a className="icon-footer hover:bg-surface-300" target="_blank" href="https://github.com/MuhammadTeguh07"><FaGithub fontSize={"1.5rem"} /></a></li>
-            <li><a className="icon-footer hover:bg-surface-300" target="_blank" href="#" onClick={handleRedirectMail}><FaRegEnvelope fontSize={"1.5rem"} /></a></li>
+        <ul className="flex gap-2 mt-5">
+            <li><a className="icon-footer hover:bg-surface-200" target="_blank" href="https://api.whatsapp.com/send/?phone=6283847070417"><FaWhatsapp fontSize={"1.5rem"} /></a></li>
+            <li><a className="icon-footer hover:bg-surface-200" target="_blank" href={`https://www.instagram.com/${props.data.instagram}`}><FaInstagram fontSize={"1.5rem"} /></a></li>
+            <li><a className="icon-footer hover:bg-surface-200" target="_blank" href="https://github.com/MuhammadTeguh07"><FaGithub fontSize={"1.5rem"} /></a></li>
+            <li><a className="icon-footer hover:bg-surface-200" target="_blank" href="#" onClick={handleRedirectMail}><FaRegEnvelope fontSize={"1.5rem"} /></a></li>
         </ul>
     );
 };

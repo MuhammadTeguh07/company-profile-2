@@ -36,7 +36,7 @@ const Navigation = () => {
     }, []);
 
     return (
-        <div id='navigation' className='flex flex-col py-28 font-medium tracking-widest'>
+        <div id='navigation' className=' lg:flex hidden flex-col py-28 font-medium tracking-widest'>
             <NavItem active={activeSection === 'about'} href='#about' name="ABOUT" />
             <NavItem active={activeSection === 'experiences'} href='#experiences' name="EXPERIENCES" />
             <NavItem active={activeSection === 'projects'} href='#projects' name="PROJECTS" />
