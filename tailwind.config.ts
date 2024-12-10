@@ -31,6 +31,9 @@ export default {
         500: '#6d6a84',
         600: '#89869c'
       },
+      'slate': {
+        100: '#cbd5e11a'
+      },
       'on-background': '#ffffff',
       /* */
       /* :: Color Palette: Yellow and Dark Grey
@@ -100,7 +103,7 @@ export default {
     },
     fontFamily: {
       'body': ['"Inter"', 'Helvetica', 'sans-serif']
-    }
+    },
   },
   plugins: [],
 } satisfies Config;

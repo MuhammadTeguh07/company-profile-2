@@ -1,11 +1,17 @@
+"use client"
+
 import React from "react";
 import ProjectItem from "./project-item";
+import Link from "next/link";
+import { useDataStore } from "@/stores/DataStore";
 
-const Projects = (props) => {
+const Projects = () => {
+    const { project } = useDataStore()
+
     return (
         <div data-section id='projects' className='mb-16 pb-24'>
-            <h2 className='mb-8 visible lg:invisible text-lg font-semibold tracking-widest'>PROJECTS</h2>
-            {props.data.slice(0, 5).map(function (object, index) {
+            <h2 className='mb-8 lg:mb-0 visible lg:invisible text-lg font-semibold tracking-widest'>PROJECTS</h2>
+            {project.slice(0, 5).map(function (object, index) {
                 return <ProjectItem
                     key={index}
                     name={object.name}
@@ -16,7 +22,7 @@ const Projects = (props) => {
                 />
             })}
             <div className="mt-0 lg:mt-10">
-                <a className="hover:text-primary-500 text-base inline-flex items-center leading-tight text-slate-200 font-semibold text-slate-200 group" aria-label="View Full Project Archive" href="/all-projects">
+                <Link className="hover:text-primary-500 text-base inline-flex items-center leading-tight text-slate-200 font-semibold text-slate-200 group" aria-label="View Full Project Archive" href="/all-projects">
                     <span>
                         <span className="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none">View Full Project</span>
                         <span className="whitespace-nowrap">
@@ -25,7 +31,7 @@ const Projects = (props) => {
                             </svg>
                         </span>
                     </span>
-                </a>
+                </Link>
             </div>
         </div>
     )
