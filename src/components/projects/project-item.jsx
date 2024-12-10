@@ -6,7 +6,7 @@ function ProjectItem(props) {
         <a href={props.href} target="_blank" rel="noopener noreferrer" className={`${props.href ? 'cursor-pointer hover:text-primary-500' : 'cursor-default'} group lg:flex lg:flex-row mb-4 py-5 rounded-md lg:p-5 transition-all lg:hover:bg-surface-200`}>
             <div className="basis-1/4 mr-5">
                 <Image
-                    src={props.image}
+                    src={props.image[0]}
                     unoptimized
                     height={200}
                     width={500}

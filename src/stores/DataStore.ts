@@ -87,105 +87,105 @@ export const useDataStore = create(() => ({
             "language": ["React.js", "TypeScript", "HTML", "CSS", "Bootstrap"],
             "description": "A platform designed to help users monitor team performance and gain deeper insights into their target market. It empowers users to be more productive with a single dashboard integrated with various modules.",
             "href": "https://crm.wooblazz.com",
-            "image": "/projects/wooblazz-crm.png"
+            "image": ["/projects/wooblazz-crm.png", "/projects/wooblazz-crm.png"]
         },
         {
             "name": "Management Account",
             "language": ["Next.js", "TypeScript", "Tailwind", "HTML", "CSS"],
             "description": "Enables users to access, manage, and synchronize services and products from Wooblazz.",
             "href": "",
-            "image": "/projects/wooblazz-account.png"
+            "image": ["/projects/wooblazz-account.png"]
         },
         {
             "name": "Broadcasting",
             "language": ["Laravel", "PHP", "HTML", "CSS", "Javascript", "JQuery", "Bootstrap"],
             "description": "A web-based platform that enables users to automatically send mass messages to multiple contacts simultaneously via WhatsApp. This platform is designed to support businesses in communicating effectively with their customers, prospects, or audience through personalized and structured messages.",
             "href": "https://dashboard.wooblazz.com/",
-            "image": "/projects/wooblazz-ads.png"
+            "image": ["/projects/wooblazz-ads.png"]
         },
         {
             "name": "Management Laundry",
             "language": ["Next.js", "TypeScript", "Tailwind", "HTML", "CSS"],
             "description": "Designed to help laundry business owners efficiently manage daily operations and enhance productivity, this platform integrates various features to streamline the management of orders, customers, employees, and laundry status tracking, all within a centralized system.",
             "href": "https://ion.looyal.id/",
-            "image": "/projects/dashboard-ion.png"
+            "image": ["/projects/dashboard-ion.png"]
         },
         {
             "name": "Dynamic Form",
             "language": ["Codeigniter", "HTML", "CSS", "Javascript", "JQuery", "Bootstrap"],
             "description": "This platform is designed to simplify the creation of forms that can automatically adapt, either based on user input or existing data, to enhance the efficiency of information collection.",
             "href": "https://form.looyal.id/adce5b",
-            "image": "/projects/wooblazz-form.png"
+            "image": ["/projects/wooblazz-form.png"]
         },
         {
             "name": "Online Order",
             "language": ["Codeigniter", "HTML", "CSS", "Javascript", "JQuery", "Bootstrap"],
             "description": "This platform enables customers to place orders easily and quickly, while helping businesses manage orders efficiently through an integrated system.",
             "href": "https://www.looyal.id/restaurant88",
-            "image": "/projects/online-order.png"
+            "image": ["/projects/online-order.png"]
         },
         {
             "name": "Point Of Sale",
             "language": ["React.js", "Bootstrap", "HTML", "CSS"],
             "description": "The POS platform helps businesses enhance operational efficiency, speed up transaction processes, and deliver a better customer experience with modern and integrated services.",
             "href": "https://pos.looyal.id",
-            "image": "/projects/pos.png"
+            "image": ["/projects/pos.png"]
         },
         {
             "name": "Backoffice",
             "language": ["Codeigniter", "HTML", "CSS", "Javascript", "JQuery", "Bootstrap"],
             "description": "Designed to support business operations behind the scenes of the Point of Sale (POS) system, this platform provides full control to business owners or managers in managing various operational aspects, from inventory, customer data, product settings, to financial reporting, all within a single integrated dashboard.",
             "href": "https://backoffice.woogigs.com",
-            "image": "/projects/woogigs-backoffice.png"
+            "image": ["/projects/woogigs-backoffice.png"]
         },
         {
             "name": "Backoffice",
             "language": ["Laravel", "PHP", "HTML", "CSS", "Javascript", "JQuery", "Bootstrap", "MySQL"],
             "description": "A system designed to facilitate public access and improve government governance to make it more efficient and effective.",
             "href": "",
-            "image": "/projects/SPBE.png"
+            "image": ["/projects/SPBE.png"]
         },
         {
             "name": "Management Stock Opname",
             "language": ["Next.js", "TypeScript", "Tailwind", "HTML", "CSS"],
             "description": "This platform enables business owners or managers to monitor stock availability in real-time, compare physical stock with system data, and identify discrepancies or inconsistencies in the inventory.",
             "href": "https://office.jgroupindonesia.com",
-            "image": "/projects/stock-opname-jvape.png"
+            "image": ["/projects/stock-opname-jvape.png"]
         },
         {
             "name": "Marketplace",
             "language": ["HTML", "CSS", "Bootstrap"],
             "description": "Enhancing the marketplace website's interface design to ensure a more intuitive and responsive user experience across all devices.",
             "href": "https://uat.emol.co.id",
-            "image": "/projects/marketplace-emol.png"
+            "image": ["/projects/marketplace-emol.png"]
         },
         {
             "name": "Management Asset",
             "language": ["Laravel", "PHP", "HTML", "CSS", "Javascript", "JQuery", "Bootstrap", "MySQL"],
             "description": "This platform provides users with the ease of tracking, maintaining, and managing assets efficiently, helping to optimize asset utilization and reduce the risk of loss or damage.",
             "href": "",
-            "image": "/projects/management-asset.png"
+            "image": ["/projects/management-asset.png"]
         },
         {
             "name": "Management ATK",
             "language": ["Laravel", "PHP", "HTML", "CSS", "Javascript", "JQuery", "Bootstrap", "MySQL"],
             "description": "With this platform, users can manage inventory, place orders, and track the usage of office supplies more efficiently, reducing waste and ensuring the availability of necessary items.",
             "href": "",
-            "image": "/projects/management-atk.png"
+            "image": ["/projects/management-atk.png"]
         },
         {
             "name": "Dashboard Monitoring",
             "language": ["HTML", "CSS", "Bootstrap"],
             "description": "Designing a website dashboard to display COVID-19 related data within the company.",
             "href": "",
-            "image": "/projects/monitoring-system.png"
+            "image": ["/projects/monitoring-system.png"]
         },
         {
             "name": "Backoffice",
             "language": ["Laravel", "PHP", "HTML", "CSS", "Javascript", "JQuery", "Bootstrap", "MySQL"],
             "description": "A system designed to help owners or managers of boarding house businesses efficiently manage all aspects of the room operations in a more organized manner.",
             "href": "",
-            "image": "/projects/boarding-room-management.png"
+            "image": ["/projects/boarding-room-management.png"]
         },
     ],
 }));

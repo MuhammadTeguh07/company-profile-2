@@ -1,4 +1,9 @@
 import './globals.css'
+import '@splidejs/react-splide/css';
+import '@splidejs/react-splide/css/skyblue';
+import '@splidejs/react-splide/css/sea-green';
+import '@splidejs/react-splide/css/core';
+
 import { Inter } from 'next/font/google'
 import Particles from "@/components/particles";
 

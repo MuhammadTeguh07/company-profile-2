@@ -4,7 +4,7 @@ import TableExperiences from '@/components/table/tableExperience';
 
 export default function allExperiencePage() {
     return (
-        <section className="flex min-h-screen flex-col items-center px-6 py-10 lg:p-24">
+        <section className="flex min-h-screen flex-col items-center px-6 py-10 lg:p-20">
             <div className="z-2 w-full max-w-7xl font-mono text-sm">
                 <div>
                     <Link className="hover:text-primary-500 group mb-2 inline-flex items-center font-semibold leading-tight text-teal-300" href="/">

@@ -7,7 +7,7 @@ const About = () => {
     const { general } = useDataStore()
 
     return (
-        <div data-section id='about' className='mb-16 group pt-24'>
+        <div data-section id='about' className='mb-16 group pt-20'>
             <h2 className='mb-8 lg:mb-0 visible lg:invisible text-lg font-semibold tracking-widest'>ABOUT</h2>
             <div className='text-surface-600'>
                 {general.about.map(function (paragraph, index) {

@@ -18,7 +18,7 @@ function TableProject() {
             </thead>
             <tbody>
                 {experience.map((data, index) => (
-                    <tr key={index} className="last:border-none" style={{borderBottom: "#cbd5e11a 0.1px solid"}}>
+                    <tr key={index} className="last:border-none" style={{borderBottom: "#cbd5e11a 2px solid"}}>
                         <td className="py-4 pr-4 align-top text-sm">
                             <span>{data.startDate} - {data.endDate}</span>
                         </td>

@@ -2,12 +2,20 @@
 
 import { useDataStore } from "@/stores/DataStore";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import Modal from '@/components/modal/page';
+import { FaEye } from "react-icons/fa";
 
 function TableProject() {
     const { project } = useDataStore();
+    const [isModalOpen, setModalOpen] = useState(false);
+    const [selectedImgProject, setSelectedImgProject] = useState([]);
+
+    const openModal = () => setModalOpen(true);
+    const closeModal = () => setModalOpen(false);
 
     return (
+        <>
         <table className="mt-12 w-full border-collapse text-left">
             <thead className="sticky top-0 z-10 px-6 py-5 backdrop-blur border-[white]">
                 <tr>
@@ -18,19 +26,27 @@ function TableProject() {
             </thead>
             <tbody>
                 {project.map((data, index) => (
-                    <tr key={index} className="last:border-none" style={{borderBottom: "#cbd5e11a 0.1px solid"}}>
+                    <tr key={index} className="last:border-none" style={{borderBottom: "#cbd5e11a 2px solid"}}>
                         <td className="py-4 pr-4 align-top text-sm">
-                            <Image
-                                src={data.image}
-                                unoptimized
-                                height={200}
-                                width={100}
-                                alt={data.name}
-                                title={data.name}
-                                style={{ border: "2px solid gray", borderRadius: "5px" }}
-                                className="mb-2 w-[100px]"
-                            />
-                        </td>
+  <div className="relative inline-block">
+    <Image
+      src={data.image[0]}
+      unoptimized
+      height={200}
+      width={100}
+      alt={data.name}
+      title={data.name}
+      style={{ border: "2px solid gray", borderRadius: "5px" }}
+      className="mb-2 w-[100px] cursor-pointer hover:opacity-70"
+      onClick={() => {
+        openModal();
+        setSelectedImgProject(data.image);
+      }}
+    />
+    <FaEye className="absolute inset-0 flex items-center justify-center text-white text-xl opacity-0 hover:opacity-100" />
+  </div>
+</td>
+
                         <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-200">
                             {
                                 data.href ?
@@ -57,7 +73,10 @@ function TableProject() {
                 ))}
             </tbody>
         </table>
-    );
+
+        <Modal isOpen={isModalOpen} onClose={closeModal} images={selectedImgProject} title="Image Modal" />
+</>
+    )
 };
 
 export default TableProject;
