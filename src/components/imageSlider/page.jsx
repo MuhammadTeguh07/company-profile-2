@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 
-export default function ImageSlider({images}) {
+export default function ImageSlider({ images }) {
   // State to keep track of the current image index
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -67,30 +67,29 @@ export default function ImageSlider({images}) {
       {
         images.length > 1 &&
         <>
-      <button
-        className="absolute h-auto left-0 top-1/2 transform h-[459px] rounded-full hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-[#111927] text-white p-2 group"
-        onClick={prevSlide}
-      >
-        <ChevronLeft className="text-gray-400 group-hover:text-white" />
-      </button>
-      <button
-        className="absolute h-auto right-0 top-1/2 transform h-[459px] rounded-full hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-[#111927] text-white p-2 group"
-        onClick={nextSlide}
-      >
-        <ChevronRight className="text-gray-400 group-hover:text-white" />
-      </button>
-      <div className="flex justify-center mt-4">
-        {images.map((_, index) => (
-          <div
-            key={index}
-            className={`h-1 w-10 mx-1 ${
-              index === currentIndex
-                ? "bg-[#ffffff] rounded-xl"
-                : "bg-gray-300 rounded-xl"
-            } transition-all duration-500 ease-in-out`}
-          ></div>
-        ))}
-      </div>
+          <button
+            className="absolute h-auto left-0 top-1/2 transform h-[459px] rounded-full hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-[#111927] text-white p-2 group"
+            onClick={prevSlide}
+          >
+            <ChevronLeft className="text-gray-400 group-hover:text-white" />
+          </button>
+          <button
+            className="absolute h-auto right-0 top-1/2 transform h-[459px] rounded-full hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-[#111927] text-white p-2 group"
+            onClick={nextSlide}
+          >
+            <ChevronRight className="text-gray-400 group-hover:text-white" />
+          </button>
+          <div className="flex justify-center mt-4">
+            {images.map((_, index) => (
+              <div
+                key={index}
+                className={`h-1 w-10 mx-1 ${index === currentIndex
+                    ? "bg-[#ffffff] rounded-xl"
+                    : "bg-gray-300 rounded-xl"
+                  } transition-all duration-500 ease-in-out`}
+              ></div>
+            ))}
+          </div>
         </>
       }
     </div>

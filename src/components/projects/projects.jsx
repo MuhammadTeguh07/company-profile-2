@@ -10,7 +10,7 @@ const Projects = () => {
 
     return (
         <div data-section id='projects' className='mb-16 pb-20'>
-            <h2 className='mb-8 lg:mb-0 visible lg:invisible text-lg font-semibold tracking-widest'>PROJECTS</h2>
+            <h2 className='mb-5 lg:mb-0 visible lg:invisible text-lg font-semibold tracking-widest'>PROJECTS</h2>
             {project.slice(0, 5).map(function (object, index) {
                 return <ProjectItem
                     key={index}

@@ -8,7 +8,7 @@ const About = () => {
 
     return (
         <div data-section id='about' className='mb-16 group pt-20'>
-            <h2 className='mb-8 lg:mb-0 visible lg:invisible text-lg font-semibold tracking-widest'>ABOUT</h2>
+            <h2 className='mb-5 lg:mb-0 visible lg:invisible text-lg font-semibold tracking-widest'>ABOUT</h2>
             <div className='text-surface-600'>
                 {general.about.map(function (paragraph, index) {
                     return <div key={index} dangerouslySetInnerHTML={{ __html: paragraph }} className='mb-6'></div>
