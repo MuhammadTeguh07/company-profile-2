@@ -28,7 +28,7 @@ function TableProject() {
                     {project.map((data, index) => (
                         <tr key={index} className="last:border-none" style={{ borderBottom: "#cbd5e11a 2px solid" }}>
                             <td className="py-4 pr-4 align-top text-sm">
-                                <div className="relative inline-block">
+                                <div className="relative inline-block group cursor-pointer hover:opacity-70">
                                     <Image
                                         src={data.image[0]}
                                         unoptimized
@@ -37,14 +37,15 @@ function TableProject() {
                                         alt={data.name}
                                         title={data.name}
                                         style={{ border: "2px solid gray", borderRadius: "5px" }}
-                                        className="mb-2 w-[100px] cursor-pointer hover:opacity-70"
+                                        className="mb-2 w-[100px]"
                                         onClick={() => {
                                             openModal();
                                             setSelectedImgProject(data.image);
                                         }}
                                     />
-                                    <FaEye className="absolute inset-0 flex items-center justify-center text-white text-xl opacity-0 hover:opacity-100" />
+                                    {/* <FaEye className="absolute z-40 right-[41%] bottom-[43%] text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
                                 </div>
+
                             </td>
 
                             <td className="py-4 pr-4 align-top font-semibold leading-snug text-slate-200">

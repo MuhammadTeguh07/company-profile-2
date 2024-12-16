@@ -24,19 +24,19 @@ export default function ImageSlider({ images }) {
   };
 
   // useEffect hook to handle automatic slide transition
-  useEffect(() => {
-    // Start interval for automatic slide change if not hovered
-    if (!isHovered) {
-      const interval = setInterval(() => {
-        nextSlide();
-      }, 3000);
+  // useEffect(() => {
+  //   // Start interval for automatic slide change if not hovered
+  //   if (!isHovered) {
+  //     const interval = setInterval(() => {
+  //       nextSlide();
+  //     }, 3000);
 
-      // Cleanup the interval on component unmount
-      return () => {
-        clearInterval(interval);
-      };
-    }
-  }, [isHovered]);
+  //     // Cleanup the interval on component unmount
+  //     return () => {
+  //       clearInterval(interval);
+  //     };
+  //   }
+  // }, [isHovered]);
 
   // Handle mouse over event
   const handleMouseOver = () => {
@@ -61,20 +61,20 @@ export default function ImageSlider({ images }) {
           layout="fill"
           objectFit="contain"
           unoptimized
-          className="rounded-xl transition-all duration-500 ease-in-out"
+          className="transition-all duration-500 ease-in-out"
         />
       </div>
       {
         images.length > 1 &&
         <>
           <button
-            className="absolute h-auto left-0 top-1/2 transform h-[459px] rounded-full hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-[#111927] text-white p-2 group"
+            className="absolute h-auto left-0 top-1/2 transform rounded-full hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-[#111927] text-white p-2 group"
             onClick={prevSlide}
           >
             <ChevronLeft className="text-gray-400 group-hover:text-white" />
           </button>
           <button
-            className="absolute h-auto right-0 top-1/2 transform h-[459px] rounded-full hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-[#111927] text-white p-2 group"
+            className="absolute h-auto right-0 top-1/2 transform rounded-full hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-[#111927] text-white p-2 group"
             onClick={nextSlide}
           >
             <ChevronRight className="text-gray-400 group-hover:text-white" />
@@ -83,9 +83,9 @@ export default function ImageSlider({ images }) {
             {images.map((_, index) => (
               <div
                 key={index}
-                className={`h-1 w-10 mx-1 ${index === currentIndex
+                className={`h-1 w-5 mx-1 ${index === currentIndex
                     ? "bg-[#ffffff] rounded-xl"
-                    : "bg-gray-300 rounded-xl"
+                    : "bg-[#ffffff76] rounded-xl"
                   } transition-all duration-500 ease-in-out`}
               ></div>
             ))}
