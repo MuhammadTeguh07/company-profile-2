@@ -4,7 +4,6 @@ import { useDataStore } from "@/stores/DataStore";
 import Image from "next/image";
 import React, { useState } from "react";
 import Modal from '@/components/modal/page';
-import { FaEye } from "react-icons/fa";
 
 function TableProject() {
     const { project } = useDataStore();
@@ -43,7 +42,6 @@ function TableProject() {
                                             setSelectedImgProject(data.image);
                                         }}
                                     />
-                                    {/* <FaEye className="absolute z-40 right-[41%] bottom-[43%] text-white text-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
                                 </div>
 
                             </td>
@@ -75,7 +73,7 @@ function TableProject() {
                 </tbody>
             </table>
 
-            <Modal isOpen={isModalOpen} onClose={closeModal} images={selectedImgProject} title="Image Modal" />
+            <Modal isOpen={isModalOpen} onClose={closeModal} images={selectedImgProject} />
         </>
     )
 };

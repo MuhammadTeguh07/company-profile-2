@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageSlider from '@/components/imageSlider/page';
 
-const Modal = ({ isOpen, onClose, title, images }) => {
+const Modal = ({ isOpen, onClose, images }) => {
   if (!isOpen) return null;
 
   return (

@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -7,9 +7,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 export default function ImageSlider({ images }) {
   // State to keep track of the current image index
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  // State to determine if the image is being hovered over
-  const [isHovered, setIsHovered] = useState(false);
 
   // Function to show the previous slide
   const prevSlide = () => {
@@ -23,37 +20,10 @@ export default function ImageSlider({ images }) {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  // useEffect hook to handle automatic slide transition
-  // useEffect(() => {
-  //   // Start interval for automatic slide change if not hovered
-  //   if (!isHovered) {
-  //     const interval = setInterval(() => {
-  //       nextSlide();
-  //     }, 3000);
-
-  //     // Cleanup the interval on component unmount
-  //     return () => {
-  //       clearInterval(interval);
-  //     };
-  //   }
-  // }, [isHovered]);
-
-  // Handle mouse over event
-  const handleMouseOver = () => {
-    setIsHovered(true);
-  };
-
-  // Handle mouse leave event
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
   return (
     <div className="relative w-full mx-auto mt-4">
       <div
         className="relative h-[460px] mx-12 group"
-        onMouseOver={handleMouseOver}
-        onMouseLeave={handleMouseLeave}
       >
         <Image
           src={images[currentIndex]}
