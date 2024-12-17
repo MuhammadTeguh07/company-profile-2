@@ -9,19 +9,21 @@ const Projects = () => {
     const { project } = useDataStore()
 
     return (
-        <div data-section id='projects' className='hover-effect-on-siblings mb-16 pb-20'>
-            <h2 className='mb-5 lg:mb-0 visible lg:invisible text-lg font-semibold tracking-widest'>PROJECTS</h2>
-            {project.slice(0, 5).map(function (object, index) {
-                return <ProjectItem
-                    key={index}
-                    name={object.name}
-                    description={object.description}
-                    href={object.href}
-                    image={object.image}
-                    language={object.language}
-                />
-            })}
-            <div className="mt-0 lg:mt-10">
+        <>
+            <div data-section id='projects' className='hover-effect-on-siblings'>
+                <h2 className='mb-5 lg:mb-0 visible lg:invisible text-lg font-semibold tracking-widest'>PROJECTS</h2>
+                {project.slice(0, 5).map(function (object, index) {
+                    return <ProjectItem
+                        key={index}
+                        name={object.name}
+                        description={object.description}
+                        href={object.href}
+                        image={object.image}
+                        language={object.language}
+                    />
+                })}
+            </div>
+            <div className="mt-0 lg:mt-10 mb-16 pb-20">
                 <Link className="hover:text-primary-500 text-base inline-flex items-center leading-tight text-slate-200 font-semibold text-slate-200 group" aria-label="View Full Project Archive" href="/all-projects">
                     <span>
                         <span className="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none">View Full Project</span>
@@ -33,7 +35,7 @@ const Projects = () => {
                     </span>
                 </Link>
             </div>
-        </div>
+        </>
     )
 }
 

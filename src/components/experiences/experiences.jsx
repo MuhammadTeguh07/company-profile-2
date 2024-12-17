@@ -8,22 +8,24 @@ const Experiences = () => {
     const { experience } = useDataStore()
 
     return (
-        <div data-section id='experiences' className='hover-effect-on-siblings mb-16'>
-            <h2 className='mb-5 lg:mb-0 visible lg:invisible text-lg font-semibold tracking-widest'>EXPERIENCES</h2>
-            {experience.slice(0, 4).map(function (object, index) {
-                return <ExperienceItem
-                    key={index}
-                    title={object.title}
-                    company={object.company}
-                    href={object.href}
-                    startDate={object.startDate}
-                    endDate={object.endDate}
-                    description={object.description}
-                    logo={object.logo}
-                    skills={object.skills}
-                />
-            })}
-            <div className="mt-0 lg:mt-10">
+        <>
+            <div data-section id='experiences' className='hover-effect-on-siblings'>
+                <h2 className='mb-5 lg:mb-0 visible lg:invisible text-lg font-semibold tracking-widest'>EXPERIENCES</h2>
+                {experience.slice(0, 4).map(function (object, index) {
+                    return <ExperienceItem
+                        key={index}
+                        title={object.title}
+                        company={object.company}
+                        href={object.href}
+                        startDate={object.startDate}
+                        endDate={object.endDate}
+                        description={object.description}
+                        logo={object.logo}
+                        skills={object.skills}
+                    />
+                })}
+            </div>
+            <div className="mt-0 lg:mt-5 mb-16">
                 <a className="hover:text-primary-500 text-base inline-flex items-center leading-tight text-slate-200 font-semibold text-slate-200 group" aria-label="View Full Project Archive" href="/all-experiences">
                     <span>
                         <span className="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none">View Full Experience</span>
@@ -35,7 +37,7 @@ const Experiences = () => {
                     </span>
                 </a>
             </div>
-        </div>
+        </>
     )
 }
 
